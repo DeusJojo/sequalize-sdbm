@@ -2,21 +2,21 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('TICKET', {
     ANNEE: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     NUMERO_TICKET: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     DATE_VENTE: {
-      type: DataTypes.DATEONLY,
+      type: Sequelize.DATEONLY,
       allowNull: false
     },
     HEURE_VENTE: {
-      type: DataTypes.TIME,
+      type: Sequelize.TIME,
       allowNull: false
     }
   }, {

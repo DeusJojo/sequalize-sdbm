@@ -3,12 +3,12 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('CONTINENT', {
     ID_CONTINENT: {
       autoIncrement: true,
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     NOM_CONTINENT: {
-      type: DataTypes.STRING(25),
+      type: Sequelize.STRING(25),
       allowNull: false
     }
   }, {

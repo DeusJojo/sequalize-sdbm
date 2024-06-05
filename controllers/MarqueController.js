@@ -1,5 +1,5 @@
 const { sequelize } = require("../config/dbConnect");
-const ArticleModel  = require("../models/ARTICLE")(sequelize);
+const MarqueModel  = require("../models/MARQUE")(sequelize);
 
 
 sequelize
@@ -11,9 +11,9 @@ sequelize
     console.error("Unable to connect to the database: ", error);
   });
 
-const getAllArticles = async (req, res) => {
-  const articles = await ArticleModel.findAll();
-  res.json(articles);
+const getAllMarques = async (req, res) => {
+  const marques = await MarqueModel.findAll();
+  res.json(marques);
 };
 
-module.exports = { getAllArticles };
+module.exports = { getAllMarques };

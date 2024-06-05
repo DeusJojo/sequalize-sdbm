@@ -1,5 +1,5 @@
 const { sequelize } = require("../config/dbConnect");
-const ArticleModel  = require("../models/ARTICLE")(sequelize);
+const TypeModel  = require("../models/TYPEBIERE")(sequelize);
 
 
 sequelize
@@ -11,9 +11,9 @@ sequelize
     console.error("Unable to connect to the database: ", error);
   });
 
-const getAllArticles = async (req, res) => {
-  const articles = await ArticleModel.findAll();
-  res.json(articles);
+const getAllTypes = async (req, res) => {
+  const types = await TypeModel.findAll();
+  res.json(types);
 };
 
-module.exports = { getAllArticles };
+module.exports = { getAllTypes };

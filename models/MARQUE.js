@@ -3,16 +3,16 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('MARQUE', {
     ID_MARQUE: {
       autoIncrement: true,
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     NOM_MARQUE: {
-      type: DataTypes.STRING(40),
+      type: Sequelize.STRING(40),
       allowNull: false
     },
     ID_PAYS: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: true,
       references: {
         model: 'PAYS',
@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     ID_FABRICANT: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: true,
       references: {
         model: 'FABRICANT',

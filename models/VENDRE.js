@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('VENDRE', {
     ANNEE: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       references: {
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     NUMERO_TICKET: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       references: {
@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     ID_ARTICLE: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true,
       references: {
@@ -29,11 +29,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     QUANTITE: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: true
     },
     PRIX_VENTE: {
-      type: DataTypes.DECIMAL(19,4),
+      type: Sequelize.DECIMAL(19,4),
       allowNull: true
     }
   }, {

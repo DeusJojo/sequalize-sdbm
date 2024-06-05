@@ -3,12 +3,12 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('FABRICANT', {
     ID_FABRICANT: {
       autoIncrement: true,
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     NOM_FABRICANT: {
-      type: DataTypes.STRING(40),
+      type: Sequelize.STRING(40),
       allowNull: false
     }
   }, {

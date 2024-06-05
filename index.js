@@ -5,7 +5,6 @@ const app = express();
 const port = process.env.PORT || 5000;
 const { sequelize } = require("./config/dbConnect");
 const { router } = require("./routes/router");
-const Article = require("./models/ARTICLE")(sequelize);
 
 const apiRoot = "/";
 
@@ -36,8 +35,3 @@ app.listen(port, () => {
       console.error("Unable to connect to the database: ", error);
     });
 })();
-
-router.get("/articles", async (req, res) => {
-  const articles = await Article.findAll();
-  res.json(articles);
-});

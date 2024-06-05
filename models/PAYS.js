@@ -3,16 +3,16 @@ module.exports = function(sequelize, DataTypes) {
   return sequelize.define('PAYS', {
     ID_PAYS: {
       autoIncrement: true,
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       primaryKey: true
     },
     NOM_PAYS: {
-      type: DataTypes.STRING(40),
+      type: Sequelize.STRING(40),
       allowNull: false
     },
     ID_CONTINENT: {
-      type: DataTypes.INTEGER,
+      type: Sequelize.INTEGER,
       allowNull: false,
       references: {
         model: 'CONTINENT',
